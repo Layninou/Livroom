@@ -1,0 +1,109 @@
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+	/***** START HEADER ******/
+	#linked-profil-img { /* image/logo navbar */
+	  	background: url('../images/linked_img_larg.png') no-repeat;
+	  	width: 120px;
+	  	height: 120px;
+	  	margin: 15px 15px 10px 0;
+	}
+
+	.navbar-brand {
+	 	padding-top: 37px;
+	}
+
+	.navbar-brand h1 { /* Title navbar */
+		color: #372F25;
+		font-size: 1.7em;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px #222;
+		margin-top: 15px;
+		margin-bottom: 0;
+		line-height: .75;
+	}
+	/****** END HEADER *******/
+
+	/***** START MAIN ******/
+	.container .jumbotron {
+		background: url(../images/jumbotron_1200.png) no-repeat;
+		max-width: 100%;
+		height: 645px;
+	}
+	/****** END MAIN *******/
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+	/***** START HEADER ******/
+	#linked-profil-img { /* image/logo navbar */
+	  	background: url('../images/linked_img_med.png') no-repeat;
+	  	width: 50px;
+	  	height: 50px;
+	  	margin: 0px 15px 10px 0px;
+	}
+
+	/****** END HEADER *******/
+
+	/***** START MAIN ******/
+	.container .jumbotron {
+   		background: url(../images/jumbotron_992.png) no-repeat;
+    	height: 558px;
+  	}
+	/****** END MAIN *******/
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	/***** START MAIN ******/
+	.container .jumbotron {
+    	background: url(../images/jumbotron_768.png) no-repeat;
+    	height: 432px;
+  	}
+	/****** END MAIN *******/
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+	/***** START HEADER ******/
+
+	#call-btn > a {
+	    font-size: 1.5em;
+	    display: block;
+	    margin: 0 20px;
+	    padding: 10px;
+	    border: 2px solid #fff;
+	    background-color: #87591A;
+	    color: #372F25;
+  	}
+
+  	#collapsable-nav a { /* Collapsed nav text */
+   	 	font-size: 1.2em;
+  	}
+
+  	#collapsable-nav a span { /* Collapsed nav glyph */
+    	font-size: 1em;
+    	margin-right: 5px;
+  	}
+
+	/****** END HEADER *******/
+
+	/***** START MAIN ******/
+	.container .jumbotron {
+    	margin-top: 30px;
+    	padding: 0;
+  	}
+	/****** END MAIN *******/
+}
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+	/***** START HEADER ******/
+	/****** END HEADER *******/
+
+	/***** START FOOTER ******/
+	/****** END FOOTER *******/
+}
