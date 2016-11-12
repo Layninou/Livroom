@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>My First Chatroom</title>
+
+  </head>
+
+  <body>
+    <h1>Chatroom</h1>
+
+    <form id="chat-form" class="chat-form" action="/" method="post">
+      <input type="text" name="message" id="message-input"
+             placeholder="Our message ..." autofocus />
+      <input type="submit" value="Send" id="message-submit">
+    </form>
+
+    <div id="chat-area">
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    //Connexion
+    var socket = io.connect('http://localhost:8000');
+
+    //Ask for the nickname and add to the server
+    var nickname = prompt('What is your nickname?');
+    socket.emit('new_client', nickname);
+    document.title = nickname + ' - ' + document.title; //Add the nickname at the title
+
+    //When a message is submit, it add to the page
+    socket.on('message', function (data){
+      addMessage(data.nickname, data.message);
+    });
+
+    //When a new client arrives, we send an information messsage
+    socket.on('new_client', function (nickname) {
+      console.log("new_client in client");
+      $('#chat-area').prepend('<p>' + nickname + ' has entered the chat! </p>')
+    });
+
+    //When a form is add, the app translate the message to the page
+    $('#chat-form').submit(function(){
+      var message = $("#message-input").val();
+      socket.emit('message', message); //Send the message to everyone
+      addMessage(nickname, message); //Add the message on the page
+      $('#message-input').val('').focus(); //Clear the message
+      return false; //Stop the form, like preventDefault in jquery
+    });
+
+    //This function add the message to the page
+    function addMessage(nickname, message) {
+      $("#chat-area").prepend('<p><strong>' + nickname + '</strong>: ' + message + '</p>');
+    }
+
+    </script>
+
+  </body>
+</html>
