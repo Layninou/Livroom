@@ -1,0 +1,16 @@
+<div class="books-tile col-md-6">
+  <div class="row-books">
+    <div class="book col-sm-5">
+      <div class="book-photo">
+        <img class="img-responsive" width="150" height="250" src="images/books/{{$ctrl.bookdata.image}}.png" alt="{{$ctrl.bookdata.title}}">
+        <div class="book-price">{{$ctrl.bookdata.price}} €</div>
+      </div>
+    </div>
+    <div class="book-description col-sm-7">
+      <h3 class="book-author">{{$ctrl.bookdata.author}}</h3>
+      <h4 class="book-title">{{$ctrl.bookdata.title}}</h4>
+      <!-- <p class="book-details">{{synopsis}}</p> -->
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>

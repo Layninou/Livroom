@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="css/plant.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+	<title>Livroom, les livres de ma chambre</title>
+
+
+</head>
+<body ng-app="livroom" ng-strict-di>
+
+	<!-- Loading indicator -->
+	<div id="main-content" class="container">
+		<loading class="loading-indicator"></loading>
+	</div>
+
+	<header>
+		<nav id="header-nav" class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="https://www.linkedin.com/in/theophile-guilbaud-92718242" class="pull-left visible-md visible-lg">
+						<div id="linked-profil-img" alt="My linked profil"></div>
+					</a>
+
+					<div class="navbar-brand">
+						<a href="indexAngular.html"> <h1> Les livres de ma chambre</h1></a>
+						<p></p>
+					</div>
+
+					<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </button>
+          		</div><!-- END navbar-header -->
+
+		        <div id="collapsable-nav" class="collapse navbar-collapse">
+		           <ul id="nav-list" class="nav navbar-nav navbar-right">
+		            <li id="navHomeButton" class="visible-xs active">
+		              <a href="indexAngular.html">
+		                <span class="glyphicon glyphicon-home"></span> Home</a>
+		            </li>
+		            <li>
+		              <a href="indexAngular.html">
+		                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> Pourquoi?</a>
+		            </li>
+		            <li id="navBookButton">
+		              <a ui-sref='public.books'>
+		                <span class="glyphicon glyphicon-book"></span><br class="hidden-xs"> Livres</a>
+		            </li>
+		            <li>
+		              <a ui-sref='public.gain'>
+		                <span class="glyphicon glyphicon-euro"></span><br class="hidden-xs"> Collecte</a>
+		            </li>
+		            <li id="phone" class="hidden-xs">
+		              <a href="tel:+33-7-69-45-24-45">
+		                <span>+33 7 69 45 24 45</span></a><div></div>
+		            </li>
+		          </ul><!-- #nav-list -->
+		        </div><!-- .collapse .navbar-collapse -->
+
+
+			</div><!-- END container-->
+		</nav><!-- END header-nav -->
+	</header>
+
+	<!-- Phone, just in mobile version -->
+	<div id="call-btn" class="visible-xs">
+	    <a class="btn" href="tel:+33768769474">
+	    <span class="glyphicon glyphicon-earphone"></span>
+	    +33 7 68 76 94 74
+	    </a>
+	</div>
+
+
+
+	<!-- the place where the magic happen with AngularJS -->
+	<ui-view>
+		<div class="text-center">
+
+		</div>
+	</ui-view>
+
+	<footer class="panel-footer">
+		<div class="container">
+			<!-- Plant -->
+			<div class="row-plant visible-lg">
+				<div class="table">
+					<div class="leaf leaf1"></div>
+					<div class="leaf leaf2"></div>
+					<div class="leaf leaf3"></div>
+					<div class="bowl"></div>
+				</div>
+			</div> <!-- END row-plant -->
+			<section id="testimonials" class="sol-sm-6 text-center">
+          		<p> Aidez moi et faites vous plaisir, prenez un de mes livres</p>
+          	</section>
+			<div class="text-center">&copy; Copyright Guilbaud Theophile 2016</div>
+		</div> <!-- END container -->
+	</footer>
+
+	<!-- Other (Bootstrap JS plugins depend on it) -->
+	<script src="angular/lib/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="angular/lib/angular.min.js"></script>
+	<script src="angular/lib/angular-ui-router.min.js"></script>
+	<!-- <script src="js/konamicode.js"></script> -->
+
+	<!-- Main Modules -->
+	<script src="angular/livroom.module.js"></script>
+
+	<!-- Common -->
+	<script src="angular/common/common.module.js"></script>
+	<script src="angular/common/loading/loading.component.js"></script>
+	<script src="angular/common/loading/loading.interceptor.js"></script>
+
+	<!-- Public  -->
+	<script src="angular/public/public.module.js"></script>
+	<script src="angular/public/public.routes.js"></script>
+	<script src="angular/public/books/books.service.js"></script>
+	<script src="angular/public/books/books.controller.js"></script>
+	<script src="angular/public/books/books.component.js"></script>
+	<script src="angular/public/don/don.controller.js"></script>
+	<script src="angular/public/don/don.component.js"></script>
+
+</body>
+</html>

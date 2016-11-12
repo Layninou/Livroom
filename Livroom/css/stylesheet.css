@@ -1,0 +1,245 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	font-size: 16px;
+  color: #fff;
+  background-color: #FFDE75;
+}
+
+/***** START HEADER ******/
+
+#header-nav { /* all navbar */
+	background-color: #87591A;
+    border-radius: 0;
+    border: 0;
+}
+
+#linked-profil-img { /* image/logo navbar */
+  	background: url('../images/linked_img.pn') no-repeat;
+  	width: 50px;
+  	height: 50px;
+  	margin: 0px 15px 10px 20px;
+}
+
+
+.navbar-brand {
+ 	 padding-top: 25px;
+}
+
+.navbar-brand h1 { /* Title navbar */
+	  color: #372F25;
+	  font-size: 1.5em;
+	  text-transform: uppercase;
+	  font-weight: bold;
+	  text-shadow: 1px 1px 1px #222;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	  line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus { /* no line under the title */
+  	text-decoration: none;
+}
+
+#nav-list { /* all div of the button option */
+  	margin-top: 10px;
+}
+
+#nav-list a { /* the button option */
+  	color: #372F25;
+  	text-align: center;
+}
+
+#nav-list a:hover { /* change color when wanna clic */
+  	background: #E7E7E7;
+}
+
+#nav-list a span { /* greater button title */
+  	font-size: 1.8em;
+}
+
+#phone { /* Phone number */
+  	margin-top: 10px;
+  	text-align: right;
+  	padding-bottom: 0;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	  border: 1px solid #372F25;
+}
+
+.navbar-header button.navbar-toggle {
+  	clear: both;
+ 	margin-top: -32px;
+}
+
+
+/****** END HEADER *******/
+
+
+/***** START FOOTER ******/
+
+.panel-footer {
+  	margin-top: 30px;
+  	padding-top: 35px;
+  	padding-bottom: 30px;
+  	background-color: #222;
+  	border-top: 0;
+}
+
+.panel-footer div.row {
+  	margin-bottom: 35px;
+}
+
+#address p {
+  	font-size: .8em;
+  	line-height: 1.8;
+}
+
+#testimonials {
+  	font-style: italic;
+}
+
+
+/****** END FOOTER *******/
+
+
+/***** START MAIN ******/
+
+/****** END MAIN *******/
+
+/***** START JUMBOTRON ******/
+
+.container .jumbotron {
+	box-shadow: 0 0 50px #87591A;
+	border: 1px solid #87591A;
+}
+
+.presentation h1 {
+	color: #372F25;
+	font-weight: bold;
+}
+
+.presentation p {
+	color: #372F25;
+}
+
+#book-tile, #map-tile { /* The container of tile */
+  	height: 250px;
+  	width: 100%;
+  	margin-bottom: 15px;
+  	position: relative;
+  	border: 1px solid #87591A;
+  	overflow: hidden;
+}
+
+#book-tile span, #map-tile span { /* The text in tile */
+	position: absolute;
+	bottom: 2px;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;
+}
+
+#book-tile { /* put the image in book tile */
+  background: url('../images/livre_img.png') no-repeat;
+  background-position: center;
+}
+
+#book-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+/****** END JUMBOTRON *******/
+
+
+/***** START BOOKS ******/
+#books-title{
+	color: #372F25;
+	font-size: 2em;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.books-tile {
+  position: relative;
+  /*border: 1px solid #87591A;*/
+  overflow: hidden;
+  /*width: 550px;*/
+  height: 300px;
+  margin: 0 auto 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.book-photo {
+	position: relative;
+	/*border: 1px solid #3F0C1F;*/
+	overflow: hidden;
+	padding: 0;
+	margin-right: -15px;
+	margin-left: auto;
+	margin-bottom: 20px;
+	max-width: 250px;
+}
+
+.book-price {
+	position: absolute;
+	bottom: 0;
+	color: #000;
+	font-weight: bold;
+	background-color: #00CC65;
+	padding: 10px;
+}
+
+
+.book-description {
+	margin-top: 20px;
+	color: #372F25;
+	font-weight: bold;
+}
+
+/****** END BOOKS *******/
+
+/***** START DON ******/
+
+#don-title {
+	color: #372F25;
+	font-size: 2em;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.money {
+	background-color: black;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.money > p {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/****** END DON *******/
+
+/***** START SPECIAL ******/
+
+#special-title {
+	color: #372F25;
+	font-size: 2em;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+/****** END SPECIAL *******/
